@@ -2,15 +2,13 @@ import os
 
 # Ler comando
 def prompt():
-    call = b""
-    while b"\n" not in call:
-        ent = os.read(0, 1)
-        if call == None: break
-    call += ent
-    return call.decode().strip().strip()
+    command = os.read(0, 4096)
+    command = command.decode("utf-8").strip()
+    command = command.split()
+
+    return command 
 
 def exec_command(command):
-    command = ["python3"] + command
     pid = os.fork()
     # Processo pai
     if pid > 0: 
@@ -19,7 +17,7 @@ def exec_command(command):
     elif pid == 0:
         os.execvp(command[0], command)
 
-    
+
 
 def mini_shell():
     os.write(1, b"Iniciando mini-shell...")
@@ -30,7 +28,7 @@ def mini_shell():
 
         if not command:
             continue
-        if command == "exit":
+        if command == ["exit"]:
             break
             
         exec_command(command)
