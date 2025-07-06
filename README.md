@@ -11,6 +11,11 @@ Limitações conhecidas:
 * O programa foi desenvolvido e testado em Linux e não funciona em ambiente Windows, pois o Windows, diferentemente de Linux, não tem a chamada fork (ou os.fork, no caso de python).
 * A entrada pode ter no máximo 4096 bytes e, portanto, comandos extremamente longos não são aceitos.
 
+Funções:
+* echo: Funciona inclusive com formatações e exibição de variáveis (como $USER e $PATH).
+* cat: Cria, concatena e exibe conteúdo de arquivos de texto.
+* ls: 
+
 Chamadas utilizadas:
 * os.read() - Entrada de dados.
 * os.write() - Saída de dados (escrita no mini shell).
