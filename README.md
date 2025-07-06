@@ -25,6 +25,7 @@ Chamadas utilizadas:
 * os.close() - Fecha o descritor do arquivo.
 * os.dup2(a,b) - Faz com que o artigo descrito pelo descritor a passe também a ser descrito pelo descritor b.
 * os.execvp() - Executa um comando, substituindo o processo em curso.
+* os.path.expandvars() - Expande variáveis de ambiente, como $PATH.
 
 os.open(), neste caso, é usado para criar o arquivo que vai receber a concatenação de arquivos solicitada ao comando Cat. Isto se faz necessário pois o código de concatenção do Cat no formato:
 `$ cat arquivo1.txt arquivo2.txt > arquivo3.txt ` 
