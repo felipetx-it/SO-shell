@@ -5,9 +5,17 @@ def prompt():
     command = os.read(0, 4096)
     command = command.decode("utf-8").strip()
     command = command.split()
+    if command[0] == "echo":
+        return expandeVariaveis(command)
     #if command[0] == "cat":
     #    return resolveCat(command)
     return command 
+
+
+# Função para expandir variáveis como PATH e USER. Sem ela, echo repete $PATH ao invés do experado (exibir o PATH do sistema)
+def expandeVariaveis(command):
+    variaveisExpandidas = [os.path.expandvars(x) if '$' in x else x for x in command]
+    return variaveisExpandidas
 
 def exec_command(command):
     pid = os.fork()
