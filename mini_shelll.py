@@ -9,7 +9,16 @@ def prompt():
     call += ent
     return call.decode().strip().strip()
 
-def exec_command():
+def exec_command(command):
+    command = ["python3"] + command
+    pid = os.fork()
+    # Processo pai
+    if pid > 0: 
+        os.wait()
+    # Processo filho
+    elif pid == 0:
+        os.execvp(command[0], command)
+
     
 
 def mini_shell():
