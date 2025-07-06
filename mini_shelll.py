@@ -5,7 +5,8 @@ def prompt():
     command = os.read(0, 4096)
     command = command.decode("utf-8").strip()
     command = command.split()
-
+    #if command[0] == "cat":
+    #    return resolveCat(command)
     return command 
 
 def exec_command(command):
@@ -15,8 +16,34 @@ def exec_command(command):
         os.wait()
     # Processo filho
     elif pid == 0:
+        if "cat" and ">" in command:
+            command.remove(">")
+            d = command[len(command)-1]
+            command.pop()
+            #command.append('/dev/null')
+            fd_out = os.open(d, os.O_WRONLY | os.O_CREAT | os.O_TRUNC,)
+            os.dup2(fd_out, 1)
+            os.close(fd_out)
+            #fd_null = os.open('/dev/null', os.O_RDONLY)
+            #os.dup2(fd_null, 0)
+            #os.close(fd_null)
         os.execvp(command[0], command)
 
+# Resolve problema de concatenar com Cat
+'''def resolveCat(command):
+    if ">" in command:
+        command.remove(">")
+        d = command[len(command)-1]
+        command.pop()
+        command.append('/dev/null')
+        print(command)
+        fd_out = os.open(d, os.O_WRONLY | os.O_CREAT | os.O_TRUNC,)
+        os.dup2(fd_out, 1)
+        os.close(fd_out)
+        fd_null = os.open('/dev/null', os.O_RDONLY)
+        os.dup2(fd_null, 0)
+        os.close(fd_null)
+    return command'''
 
 
 def mini_shell():
