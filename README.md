@@ -14,7 +14,7 @@ Limitações conhecidas:
 Funções:
 * echo: Funciona inclusive com formatações e exibição de variáveis (como $USER e $PATH).
 * cat: Cria, concatena e exibe conteúdo de arquivos de texto.
-* ls: 
+* ls: Lista o conteúdo de um determinado diretório. 
 
 Chamadas utilizadas:
 * os.read() - Entrada de dados.
