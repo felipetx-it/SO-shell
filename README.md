@@ -36,3 +36,7 @@ os.dup2() faz com que o arquivo aberto (arquivo3.txt, neste exemplo) passe a ser
 os.close() fecha o descritor original de arquivo3.txt, apenas por segurança.
 
 Após a execuçao, o processo filho é encerrado. Como cada processo possui a sua tabela de descritores de arquivo, a operação de fazer stdout apontar para arquivo3.txt é perdida, evitando que os próximos textos escritos na saída padrão sejam também enviados para o arquivo3.txt.
+
+
+
+# Entradas e Saídas
