@@ -38,6 +38,8 @@ os.close() fecha o descritor original de arquivo3.txt, apenas por segurança.
 Após a execuçao, o processo filho é encerrado. Como cada processo possui a sua tabela de descritores de arquivo, a operação de fazer stdout apontar para arquivo3.txt é perdida, evitando que os próximos textos escritos na saída padrão sejam também enviados para o arquivo3.txt.
 
 
+Link do vídeo com a demonstração do código: https://www.youtube.com/watch?v=ZRASnQMNIZI
+
 
 Entradas e Saídas
 
