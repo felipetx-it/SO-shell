@@ -22,6 +22,7 @@ Chamadas utilizadas:
 * os.wait() - Fazer o processo pai aguardar o término do processo filho.
 * os.fork() - Criar um processo filho fazendo uma cópia do processo pai.
 * os.open() - Abre um arquivo e retorna o descritor deste arquivo.
+* os.strerror() - Traduz um código de erro em uma mensagem legível.
 * os.close() - Fecha o descritor do arquivo.
 * os.dup2(A,B) - Faz com que o arquivo descrito pelo descritor A passe também a ser descrito pelo descritor B.
 * os.execvp() - Executa um comando, substituindo o processo em curso.
