@@ -29,7 +29,7 @@ Chamadas utilizadas:
 
 os.open(), neste caso, é usado para criar o arquivo que vai receber a concatenação de arquivos solicitada ao comando Cat. Isto se faz necessário pois o código de concatenção do Cat no formato:
 `$ cat arquivo1.txt arquivo2.txt > arquivo3.txt ` 
-se utiliza do ">", que é um recurso de redirecionamento comum de shells. Como implementamos um mini shell, evidentemente não podemos usar esse recurso, daí a necessidade do uso de os.open(), os.close() e os.dup2().
+se utiliza do ">", que é um recurso de redirecionamento comum de shells. Como implementamos um mini shell, evidentemente não podemos usar esse recurso (temos que implementá-lo), daí a necessidade do uso de os.open(), os.close() e os.dup2().
 
 os.dup2() faz com que o arquivo aberto (arquivo3.txt, neste exemplo) passe a ser descrito também pelo descritor 1, que é o descritor de stdout (saída padrão). Então o que antes sairia na saída padrão (neste caso o terminal), passa a ser redirecionado para este arquivo3.txt. Quando o cat é efetivamente chamado pelo execvp(), ele lança o conteúdo de arquivo1.txt e arquivo2.txt na saída padrão, cujo descritor agora aponta para arquivo3.txt, concatenando ambos.
 
