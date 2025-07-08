@@ -23,7 +23,7 @@ Chamadas utilizadas:
 * os.fork() - Criar um processo filho fazendo uma cópia do processo pai.
 * os.open() - Abre um arquivo e retorna o descritor deste arquivo.
 * os.close() - Fecha o descritor do arquivo.
-* os.dup2(a,b) - Faz com que o arquivo descrito pelo descritor a passe também a ser descrito pelo descritor b.
+* os.dup2(A,B) - Faz com que o arquivo descrito pelo descritor A passe também a ser descrito pelo descritor B.
 * os.execvp() - Executa um comando, substituindo o processo em curso.
 * os.path.expandvars() - Expande variáveis de ambiente, como $PATH.
 
