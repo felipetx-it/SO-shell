@@ -73,11 +73,21 @@ main.py  prim.py  so_alpha.py  test.txt
 
 3. echo
    
-input
+input 1
 ```
 > echo Hello World!
 ```
-output
+output 1
 ```
 Hello World!
+```
+
+
+input 2
+```
+> echo -e Teste \tnumero 4
+```
+output 2
+```
+Teste   numero 4
 ```
