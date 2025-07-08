@@ -49,7 +49,7 @@ Entradas e Saídas
 
 1. cat
    
-      input
+      input | criar um arquivo 'test.txt'
       ```
       > cat > test.txt
       Testando criação de arquivos com cat
@@ -57,11 +57,24 @@ Entradas e Saídas
       #EOF (crtl D)
       ```
       <img width="818" height="135" alt="Image" src="https://github.com/user-attachments/assets/bf7b198a-1c43-42b6-85ac-9a0ef982f931" />
-        
 
-2. ls
+
+      input | imprimir o arquivo 'test.txt'
+      ```
+      > cat test.txt
+      ```
+      output
+      ```
+      Testando criação de arquivos com cat
+      Arquivo criado com sucesso
+      ```
+
+
+      
+
+3. ls
    
-      input
+      input | listar 
       ```
       ls
       ```
@@ -71,23 +84,23 @@ Entradas e Saídas
       ```
 
 
-3. echo
+4. echo
    
-      input 1
+      input | imprimir
       ```
       > echo Hello World!
       ```
-      output 1
+      output 
       ```
       Hello World!
       ```
       
       
-      input 2
+      input | imprimir com formatação (tab)
       ```
-      > echo -e Teste \tnumero 4
+      > echo -e Teste \tnumero 5
       ```
       output 2
       ```
-      Teste   numero 4
+      Teste   numero 5
       ```
