@@ -5,6 +5,10 @@ import os
 def prompt():
     try:
         command = os.read(0, 4096)
+        # Checa EOF (crtl D)
+        if command == b"":
+            raise EOFError
+    
         command = command.decode("utf-8").strip()
         command = command.split()
         if not command:
@@ -13,6 +17,8 @@ def prompt():
             return expandeVariaveis(command)
 
         return command
+    except EOFError:
+        return ["exit"] # crtl D -> exit shell
     except Exception as e:
         os.write(2, f"Erro ao ler comando: {str(e)}\n".encode("utf-8"))
         return []
@@ -44,9 +50,9 @@ def exec_command(command):
     if pid == 0:
             
         if "cat" in command and ">" in command:
-            i = command.index(">")
-            d = command[i+1]
-            command = command[:i]
+            i = command.index(">") #encontra o ">"
+            d = command[i+1]       #pega o proximo item, que nesse caso é o arquivo final
+            command = command[:i]  #remove do comando de i (">") em diante
             try: 
 
                 fd_out = os.open(
