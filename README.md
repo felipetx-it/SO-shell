@@ -46,6 +46,7 @@ Entradas e Saídas
 Iniciando mini-shell...
 >
 ```
+
 1. cat
    
 input
@@ -56,6 +57,7 @@ Arquivo criado com sucesso
 #EOF (crtl D)
 ```
   
+
 2. ls
    
 input
@@ -66,6 +68,7 @@ output
 ```
 main.py  prim.py  so_alpha.py  test.txt
 ```
+
 
 3. echo
    
