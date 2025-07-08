@@ -41,4 +41,6 @@ Após a execuçao, o processo filho é encerrado. Como cada processo possui a su
 
 Entradas e Saídas
 
-```djnjiejfie```
+```teste
+cat
+```
