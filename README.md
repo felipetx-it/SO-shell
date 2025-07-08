@@ -56,6 +56,7 @@ Testando criação de arquivos com cat
 Arquivo criado com sucesso
 #EOF (crtl D)
 ```
+<img width="818" height="135" alt="Image" src="https://github.com/user-attachments/assets/bf7b198a-1c43-42b6-85ac-9a0ef982f931" />
   
 
 2. ls
