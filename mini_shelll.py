@@ -49,7 +49,7 @@ def exec_command(command):
     # Processo filho
     if pid == 0:
             
-        if "cat" in command and ">" in command:
+        if ">" in command:
             i = command.index(">") #encontra o ">"
             d = command[i+1]       #pega o proximo item, que nesse caso é o arquivo final
             command = command[:i]  #remove do comando de i (">") em diante
