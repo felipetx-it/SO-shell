@@ -41,53 +41,53 @@ Após a execuçao, o processo filho é encerrado. Como cada processo possui a su
 
 Entradas e Saídas
 
-- Início (ao rodar o código)
-```
-Iniciando mini-shell...
->
-```
+      - Início (ao rodar o código)
+      ```
+      Iniciando mini-shell...
+      >
+      ```
 
 1. cat
    
-input
-```
-> cat > test.txt
-Testando criação de arquivos com cat
-Arquivo criado com sucesso
-#EOF (crtl D)
-```
-<img width="818" height="135" alt="Image" src="https://github.com/user-attachments/assets/bf7b198a-1c43-42b6-85ac-9a0ef982f931" />
-  
+      input
+      ```
+      > cat > test.txt
+      Testando criação de arquivos com cat
+      Arquivo criado com sucesso
+      #EOF (crtl D)
+      ```
+      <img width="818" height="135" alt="Image" src="https://github.com/user-attachments/assets/bf7b198a-1c43-42b6-85ac-9a0ef982f931" />
+        
 
 2. ls
    
-input
-```
-ls
-```
-output
-```
-main.py  prim.py  so_alpha.py  test.txt
-```
+      input
+      ```
+      ls
+      ```
+      output
+      ```
+      main.py  prim.py  so_alpha.py  test.txt
+      ```
 
 
 3. echo
    
-input 1
-```
-> echo Hello World!
-```
-output 1
-```
-Hello World!
-```
-
-
-input 2
-```
-> echo -e Teste \tnumero 4
-```
-output 2
-```
-Teste   numero 4
-```
+      input 1
+      ```
+      > echo Hello World!
+      ```
+      output 1
+      ```
+      Hello World!
+      ```
+      
+      
+      input 2
+      ```
+      > echo -e Teste \tnumero 4
+      ```
+      output 2
+      ```
+      Teste   numero 4
+      ```
