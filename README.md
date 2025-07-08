@@ -41,6 +41,39 @@ Após a execuçao, o processo filho é encerrado. Como cada processo possui a su
 
 Entradas e Saídas
 
-```teste
-cat
+- Início (ao rodar o código)
+```
+Iniciando mini-shell...
+>
+```
+1. cat
+   
+input
+```
+> cat > test.txt
+Testando criação de arquivos com cat
+Arquivo criado com sucesso
+#EOF (crtl D)
+```
+  
+2. ls
+   
+input
+```
+ls
+```
+output
+```
+main.py  prim.py  so_alpha.py  test.txt
+```
+
+3. echo
+   
+input
+```
+> echo Hello World!
+```
+output
+```
+Hello World!
 ```
